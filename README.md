@@ -83,7 +83,7 @@ NIST CSF has five core functions:
   
   2. **Set Up Basic Firewall Rules (UFW)**
 
-         sudo ufw !enable!
+         sudo ufw enable
          sudo ufw allow OpenSSH
          sudo ufw allow 443/tcp
          sudo ufw status verbose
@@ -101,6 +101,39 @@ NIST CSF has five core functions:
 2. *Linux: Review Lynis Report**
 
        cat /var/log/lynis-report.dat
+    - Look for **security misconfigurations**
+
+3. **Analyze Security Logs with Splunk/Wazuh**
+    - If you set up **Splunk**, create a **dashboard** to track compliance events.
+
+<h2>🛠 Step 6: Write a Compliance Summary Report</h2>  
+
+🎯 Your Deliverable: A **1-Page Compliance Report** summarizing:  
+
+✅ Controls Implemented  
+✅ Findings from Compliance Tools  
+✅ Areas for Improvement  
+✅ Next Steps  
+
+<h3> 📄 Example Summary: </h3>  
+
+**Security Compliance Report - NIST CSF Implementation in Home Lab**  
+**Date:** \[02/14/25]  
+**Compliance Framework:** NIST Cybersecurity Framework (CSF) 
+
+<h3> 🔹 Summary of Controls Implemented </h3>  
+
+✅ Access Control (Windows & Linux GPOs) → PROTECT  
+✅ Security Logging Enabled (Splunk/Wazuh) → DETECT  
+✅ Firewall Rules (UFW, pfSense) → PROTECT  
+✅ Audit Logs Reviewed → DETECT & RESPOND  
+
+<h3> 🔹 Findings </h3>  
+
+📌 Windows Server Compliance Scan: Passed 8/10 controls (Weak password policy detected)  
+📌 Linux Security Audit (Lynis): Hardening score 85/100 (Need SSH restriction improvement)  
+📌 Splunk Logs: Detected 3 failed login attempts (Possible brute force)  
+
 
 <p align="center">
 Launch the utility: <br/>
