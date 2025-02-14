@@ -2,9 +2,8 @@
 
  
 
-<h2>Objective</h2>
-Understand how to map security controls to compliance frameworks (e.g., NIST CSF, ISO 27001, SOC 2) and test compliance in a home lab.
-<br/>
+**Objective**: Understand how to map security controls to compliance frameworks (e.g., NIST CSF, ISO 27001, SOC 2) and test compliance in a home lab.
+ <br/>
 
 
 <h2>🛠 Step 1: Choose a Compliance Framework</h2>
@@ -20,12 +19,13 @@ You can start with NIST Cybersecurity Framework (CSF) since it's widely used and
 📄 Download the NIST CSF document [HERE](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf) <br/>  
 
   
-<h2>🛠 Step 2: Set Up Your Home Lab <br/>  
+<h2>🛠 Step 2: Set Up Your Home Lab </h2>
    
-🔹 Install a Windows Server & Linux VM </h2>
-We'll map compliance requirements to actual security settings in a controlled environment.  
-  
- 🔧 Tools & Setup:
+<h3>🔹 Install a Windows Server & Linux VM </h3>  
+We'll map compliance requirements to actual security settings in a controlled environment.<br/>   
+  <br/>  
+
+   🔧 Tools & Setup:
    - <b>Windows Server 2022 (or 2019) VM</b> - For Group Policy, logging, and access control </b>
    - <b>Ubuntu/Debian VM</b> - For security configuration and compliance scanning </b>
    - <b>pfSense VM (Optional)<b/> - If you want to add firewall policies
@@ -118,7 +118,7 @@ NIST CSF has five core functions:
 <h3> 📄 Example Summary: </h3>  
 
 **Security Compliance Report - NIST CSF Implementation in Home Lab**  
-**Date:** \[02/14/25]  
+**Date:** \[Your Date]  
 **Compliance Framework:** NIST Cybersecurity Framework (CSF) 
 
 <h3> 🔹 Summary of Controls Implemented </h3>  
@@ -130,39 +130,22 @@ NIST CSF has five core functions:
 
 <h3> 🔹 Findings </h3>  
 
-📌 Windows Server Compliance Scan: Passed 8/10 controls (Weak password policy detected)  
-📌 Linux Security Audit (Lynis): Hardening score 85/100 (Need SSH restriction improvement)  
-📌 Splunk Logs: Detected 3 failed login attempts (Possible brute force)  
+📌 **Windows Server Compliance Scan**: Passed 8/10 controls (Weak password policy detected)  
+📌 **Linux Security Audit (Lynis)**: Hardening score 85/100 (Need SSH restriction improvement)  
+📌 **Splunk Logs**: Detected 3 failed login attempts (Possible brute force)  
+  
+<h3> 🔹 Areas for Improvement </h3>  
 
+  - Enforce **MFA** for **Windows Login**  
+  - Implement **automatic remidiation scripts** for failed login detection
 
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+<h3> 🔹 Next Steps </h3>  
+
+   1. Set up **Automated Compliance Monitoring** (e.g., Wazuh SIEM rules)
+   2. Perform **Continuous Auditing** (Scheduled CIS Benchmark scans)
+
+  
+
 
 <!--
  ```diff
