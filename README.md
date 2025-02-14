@@ -3,7 +3,7 @@
  
 
 <h2>Objective</h2>
-Understand how to map security controls to compliance frameworks and test compliance in a home lab.
+Understand how to map security controls to compliance frameworks (e.g., NIST CSF, ISO 27001, SOC 2) and test compliance in a home lab.
 <br />
 
 
