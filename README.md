@@ -58,7 +58,7 @@ NIST CSF has five core functions:
 
 <h2>🛠 Step 4: Implement Compliance Controls <br/>  
    
-🔹 Install a Windows Server & Linux VM </h2>  
+🔹 Windows Server Hardening (Protect & Detect) </h2>  
   
   🔧 Tasks:  
   1. Enable Password Policies
@@ -72,16 +72,36 @@ NIST CSF has five core functions:
       - Install **Splunk** or **Wazuh** to collect logs
 
   
- <h2>🔹 Linux Hardening (Protect & Detect)<br/>   
+ <h2>🔹 Linux Hardening (Protect & Detect)</h2>  
   
   🔧 Tasks:  
   1. **Run a Compliance Scan (NIST, CIS Benchmarks)**
+  
+         sudo apt install lynis -y
+         sudo lynis audit system  
+  - This will generate a **security report** based on NIST controls.
+  
+  2. **Set Up Basic Firewall Rules (UFW)**
+
+         sudo ufw !enable!
+         sudo ufw allow OpenSSH
+         sudo ufw allow 443/tcp
+         sudo ufw status verbose
+  - This ensures only secure traffic is allowed.  
+
+<h2>🛠 Step 5: Compliance Validation & Reporting  <br/>  
      
-    bash  
-    sudo apt install lynis -y
-    sudo lynis audit system  
-    
-     
+🔹 Generate a Compliance Report  </h2>  
+  
+ 1. **Windows: Check compliance settings**  
+  
+        Get-GPOReport -All -ReportType HTML -Path C:\GPO_Report.html
+    - This exports a **Group Policy** compliance report.
+  
+2. *Linux: Review Lynis Report**
+
+       cat /var/log/lynis-report.dat
+
 <p align="center">
 Launch the utility: <br/>
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
