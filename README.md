@@ -8,15 +8,17 @@ Understand how to map security controls to compliance frameworks (e.g., NIST CSF
 
 
 <h2>🛠 Step 1: Choose a Compliance Framework</h2>
-You can start with NIST Cybersecurity Framework (CSF) since it's widely used and publicly available.
+You can start with NIST Cybersecurity Framework (CSF) since it's widely used and publicly available. 
+
+Alternative Options:
 
 
+- <b>ISO 27001 (if you want international standards)</b> 
+- <b>SOC 2 (if you're interested in auditing for service providers)</b>
+- <b>PCI-DSS (for payment security compliance)</b>
 
- 🔹Alternative Options:
-
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
-
+👉 For this project, we'll use NIST CSF as our baseline framework.
+📄 Download the NIST CSF document
 <h2>Environments Used </h2>
 
 - <b>Windows 10</b> (21H2)
